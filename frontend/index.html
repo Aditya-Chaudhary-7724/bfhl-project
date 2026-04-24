@@ -18,7 +18,7 @@ async function send() {
   let input = document.getElementById("input").value;
   let data = input.split("\n");
 
-  let res = await fetch("http://127.0.0.1:5000/bfhl", {
+  let res = await fetch("https://bfhl-project-2-i2co.onrender.com/bfhl", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -28,8 +28,7 @@ async function send() {
 
   let result = await res.json();
   document.getElementById("output").innerText =
-    JSON.stringify(result, null, 
-    2);
+    JSON.stringify(result, null, 2);
 }
 </script>
 
